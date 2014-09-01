@@ -85,19 +85,19 @@ void init_msm_properties(unsigned long msm_id, unsigned long msm_ver, char *boar
         property_set("ro.cdma.home.operator.alpha", "Verizon");
         property_set("ro.cdma.home.operator.numeric", "311480");
     } else if (strstr(bootloader, "SC01F")) {
-        /* hltevzw */
-        property_set("ro.build.fingerprint", "samsung/SC-01F/SC-01F:4.3/JSS15J/SC01FOMUBMIF:user/release-keys");
-        property_set("ro.build.description", "hltedcm-user 4.3 JSS15J SC01FOMUBMIF release-keys");
+        /* hltedcm */
+        gsm_properties();
+        property_set("ro.build.fingerprint", "samsung/SC-01F/SC-01F:4.4.2/KOT49H/SC01FOMUFNF6:user/release-keys");
+        property_set("ro.build.description", "hltedcm-user 4.4.2 KOT49H SC01FOMUFNF6 release-keys");
         property_set("ro.product.model", "SC-01F");
         property_set("ro.product.device", "SC-01F");
-        property_set("ro.telephony.ril.v3", "newDialCode");
     } else if (strstr(bootloader, "SCL22")) {
         /* hltekdi */
-        property_set("ro.build.fingerprint", "KDDI/SCL22/SCL22:4.3/JSS15J/SCL22KDUBML1:user/release-keys");
-        property_set("ro.build.description", "hltekdi-user 4.3 JSS15J SCL22KDUBML1 release-keys");
+        cdma_properties("1");
+        property_set("ro.build.fingerprint", "KDDI/SCL22/SCL22:4.4.2/KOT49H/SCL22KDU2FNF7:user/release-keys");
+        property_set("ro.build.description", "hltekdi-user 4.4.2 KOT49H SCL22KDU2FNF7 release-keys");
         property_set("ro.product.model", "SCL22");
         property_set("ro.product.device", "SCL22");
-        property_set("ro.telephony.ril.v3", "newDriverCallU,newDialCode");
     } else if (strstr(bootloader, "N900R4")) {
         /* hlteusc */
         cdma_properties("0");
